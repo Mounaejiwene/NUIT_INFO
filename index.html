@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Cours Vidéo - Design Élégant & Moderne</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <div class="header-content">
+        <div class="brand">✦ HTML4 / CSS2.1 / jQuery1 </div>
+        <a href="#" id="burger" class="burger">☰</a>
+        <ul id="nav" class="nav">
+          <li><a href="#cours">Cours</a></li>
+          <li><a href="#video">Vidéo</a></li>
+          <li><a href="#demo">Carrousel</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li>
+            <a href="#" id="theme-toggle" class="theme-toggle" title="Mode jour/nuit" aria-label="Basculer le thème">
+              <span class="icon-sun" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V2M12 22v-2M4.93 4.93L3.52 3.52M20.48 20.48l-1.41-1.41M4 12H2m20 0h-2M4.93 19.07l-1.41 1.41M20.48 3.52l-1.41 1.41M12 8a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="icon-moon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="theme-label">Thème</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <div id="content">
+      <div id="cours" class="section">
+        <h1>Web rétro 2000–2010 — Démonstration moderne</h1>
+        
+        <div class="tabs" id="course-tabs">
+          <ul class="tabs-nav">
+            <li class="active"><a href="#tab-html4">HTML4</a></li>
+            <li><a href="#tab-css21">CSS2.1</a></li>
+            <li><a href="#tab-jq1">jQuery 1</a></li>
+          </ul>
+          <div class="tabs-content">
+            <div id="tab-html4" class="tab-pane active">
+              <h3>HTML4: principes et doctype</h3>
+              <p>HTML 4.01 structure le contenu avec des balises sémantiques limitées (sans <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, etc.). Le doctype courant était <em>Transitional</em> pour plus de tolérance d'anciennes pratiques.</p>
+              <ul>
+                <li>Doctype: <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code></li>
+                <li>Attributs présentations parfois utilisés (à éviter au profit du CSS).</li>
+                <li>Intégration média via <strong>iframes</strong> ou plugins (Flash).</li>
+              </ul>
+            </div>
+            <div id="tab-css21" class="tab-pane">
+              <h3>CSS 2.1: mise en page "old school"</h3>
+              <p>La mise en page responsive se fait via <strong>floats</strong>, largeurs en %, et quelques media queries. Pas de flexbox/grid.</p>
+              <ul>
+                <li>Colonnes avec <code>float:left</code> et <code>overflow:hidden</code> pour le clearfix.</li>
+                <li>Unités relatives (%), images fluides (<code>width:100%</code>).</li>
+                <li>Dégradations gracieuses pour anciens navigateurs.</li>
+              </ul>
+            </div>
+            <div id="tab-jq1" class="tab-pane">
+              <h3>jQuery 1.x: interactions légères</h3>
+              <p>jQuery 1 facilite la manipulation du DOM, les animations (<code>fadeIn/slideToggle</code>), et les événements, compatible IE6+.</p>
+              <ul>
+                <li>Menu burger: <code>$('#nav').slideToggle()</code></li>
+                <li>Carrousel: simple alternance des slides avec <code>fadeIn</code>.</li>
+                <li>Formulaire: validations de base et rendu dynamique des avis.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="col col-left">
+            <h3>Intégration vidéo</h3>
+            <p>Avant HTML5, la vidéo était souvent intégrée via un plugin (ex: Flash) ou via une <em>iframe</em> vers un lecteur externe (YouTube). Avec HTML5, la balise <code>&lt;video&gt;</code> a simplifié l'intégration native.</p>
+            <ul>
+              <li><strong>2000s</strong>: Flash Player, iframes vers lecteurs propriétaires.</li>
+              <li><strong>2010s</strong>: HTML5 video, codecs H.264 / VP8, conteneurs MP4 / WebM.</li>
+              <li><strong>Aujourd'hui</strong>: streaming adaptatif (HLS/DASH), DRM (EME), sous-titres (VTT).</li>
+            </ul>
+          </div>
+          <div class="col col-right">
+            <h3>Codecs & conteneurs</h3>
+            <p>Un <strong>codec</strong> (H.264, VP9, AV1) compresse la vidéo. Un <strong>conteneur</strong> (MP4, WebM) encapsule audio, vidéo et métadonnées. Compatibilité varie selon navigateurs et époques.</p>
+            <p>Sur cette page, nous restons <strong>compatibles HTML4/CSS2.1/jQuery1</strong> et intégrons une vidéo via une iframe YouTube.</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div id="video" class="section">
+        <h2>Vidéo: Tutoriel sur HTML (intégration via iframe)</h2>
+        <div class="video-wrapper">
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ppauAg1JKNg" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div id="demo" class="section">
+        <h2>Carrousel d'images (jQuery 1.x)</h2>
+        <div id="carousel" class="carousel">
+          <div class="slides">
+            <div class="slide active"><img src="https://picsum.photos/seed/legacy1/800/400" alt="Image 1"></div>
+            <div class="slide"><img src="https://picsum.photos/seed/legacy2/800/400" alt="Image 2"></div>
+            <div class="slide"><img src="https://picsum.photos/seed/legacy3/800/400" alt="Image 3"></div>
+          </div>
+          <a href="#" class="prev" id="prev">‹</a>
+          <a href="#" class="next" id="next">›</a>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+
+      <div id="galerie" class="section">
+        <h2>Galerie de démonstration</h2>
+        <div class="gallery" id="gallery">
+          <img src="https://picsum.photos/seed/pic1/300/180" alt="Photo 1" class="thumb">
+          <img src="https://picsum.photos/seed/pic2/300/180" alt="Photo 2" class="thumb">
+          <img src="https://picsum.photos/seed/pic3/300/180" alt="Photo 3" class="thumb">
+          <img src="https://picsum.photos/seed/pic4/300/180" alt="Photo 4" class="thumb">
+          <img src="https://picsum.photos/seed/pic5/300/180" alt="Photo 5" class="thumb">
+          <img src="https://picsum.photos/seed/pic6/300/180" alt="Photo 6" class="thumb">
+          <img src="https://picsum.photos/seed/pic7/300/180" alt="Photo 7" class="thumb">
+          <img src="https://picsum.photos/seed/pic8/300/180" alt="Photo 8" class="thumb">
+        </div>
+        <div id="lightbox" class="lightbox" style="display:none">
+          <a href="#" class="lightbox-close" id="lightbox-close">×</a>
+          <img id="lightbox-img" src="/placeholder.svg" alt="Agrandissement">
+        </div>
+      </div>
+
+      <div id="avis" class="section">
+        <h2>Avis des utilisateurs</h2>
+        <div class="columns">
+          <div class="col col-left">
+            <div id="stats" class="stats">
+              <div class="stat-row"><strong>Nombre d'avis:</strong> <span id="stat-count">0</span></div>
+              <div class="stat-row"><strong>Note moyenne:</strong> <span id="stat-avg">0.0</span> / 5</div>
+              <div class="histogram">
+                <div class="bar"><span class="bar-label">5★</span><div class="bar-fill" id="h5" style="width:0%"></div></div>
+                <div class="bar"><span class="bar-label">4★</span><div class="bar-fill" id="h4" style="width:0%"></div></div>
+                <div class="bar"><span class="bar-label">3★</span><div class="bar-fill" id="h3" style="width:0%"></div></div>
+                <div class="bar"><span class="bar-label">2★</span><div class="bar-fill" id="h2" style="width:0%"></div></div>
+                <div class="bar"><span class="bar-label">1★</span><div class="bar-fill" id="h1" style="width:0%"></div></div>
+              </div>
+            </div>
+            <div id="reviews" class="reviews">
+              <h3>Derniers avis</h3>
+              <ul id="reviews-list"></ul>
+            </div>
+          </div>
+          <div class="col col-right">
+            <h3>Donner votre avis</h3>
+            <div class="form-notice" id="form-notice">
+              Ce site de démonstration est réalisé avec des outils « anciens » (HTML4, CSS2.1, jQuery 1). Vos avis sont enregistrés dans une base de données sqlite.
+            </div>
+            <form id="review-form" action="#" method="post">
+              <div class="field">
+                <label><input type="checkbox" id="consent"> J'ai compris que ce site utilise HTML4/CSS2.1/jQuery1.</label>
+              </div>
+              <div class="field">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" maxlength="50">
+              </div>
+              <div class="field">
+                <label for="experience">Votre expérience avec HTML4</label>
+                <select id="experience" name="experience">
+                  <option value="">Choisir…</option>
+                  <option value="decouvrir">Découvrir</option>
+                  <option value="debutant">Débutant</option>
+                  <option value="intermediaire">Intermédiaire</option>
+                  <option value="avance">Avancé</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Ce que vous aimez dans le stack ancien</label>
+                <div><label><input type="checkbox" name="likes" value="simplicite"> Simplicité</label></div>
+                <div><label><input type="checkbox" name="likes" value="compatibilite"> Compatibilité large</label></div>
+                <div><label><input type="checkbox" name="likes" value="performance"> Performance perçue</label></div>
+                <div><label><input type="checkbox" name="likes" value="connais_pas"> Je ne le connais pas</label></div>
+              </div>
+              <div class="field">
+                <label>Ce qui est difficile</label>
+                <div><label><input type="checkbox" name="pains" value="mise_en_page"> Mise en page (floats)</label></div>
+                <div><label><input type="checkbox" name="pains" value="accessibilite"> Accessibilité</label></div>
+                <div><label><input type="checkbox" name="pains" value="maintenabilite"> Maintenabilité</label></div>
+                <div><label><input type="checkbox" name="pains" value="connais_pas"> Je ne le connais pas</label></div>
+              </div>
+              <div class="field">
+                <label for="rating">Note sur la démonstration</label>
+                <select id="rating" name="rating">
+                  <option value="">Choisir…</option>
+                  <option value="5">5 ★★★★★</option>
+                  <option value="4">4 ★★★★</option>
+                  <option value="3">3 ★★★</option>
+                  <option value="2">2 ★★</option>
+                  <option value="1">1 ★</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="comment">Commentaire</label>
+                <textarea id="comment" name="comment" rows="4" cols="30" maxlength="500"></textarea>
+              </div>
+              <div class="actions">
+                <button type="submit" id="submit-btn">Envoyer mon avis</button>
+              </div>
+              <div id="form-msg" class="form-msg" style="display:none"></div>
+            </form>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div>© 2025 — Design élégant avec HTML4/CSS2.1/jQuery1</div>
+    </div>
+  </div>
+</body>
+</html>
