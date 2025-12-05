@@ -1,28 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Cours Vidéo - Design Élégant & Moderne</title>
+  <title>Web Rétro 2000–2010 — Design Élégant Moderne</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <link rel="stylesheet" type="text/css" href="styles_21.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="scripts_21.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
   <div id="container">
     <div id="header">
       <div class="header-content">
-        <div class="brand">✦ HTML4 / CSS2.1 / jQuery1 </div>
+        <div class="brand">✦ Legacy Stack 2010</div>
         <a href="#" id="burger" class="burger">☰</a>
         <ul id="nav" class="nav">
-          <li><a href="#cours">Cours</a></li>
-          <li><a href="#video">Vidéo</a></li>
-          <li><a href="#demo">Carrousel</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#avis">Avis</a></li>
-          <li>
-            <a href="#" id="theme-toggle" class="theme-toggle" title="Mode jour/nuit">Thème</a>
-          </li>
+          <li><button class="nav-btn" data-target="#cours" title="Cours">📚 Cours</button></li>
+          <li><button class="nav-btn" data-target="#video" title="Vidéo">▶ Vidéo</button></li>
+          <li><button class="nav-btn" data-target="#demo" title="Carrousel">◀ Démo</button></li>
+          <li><button class="nav-btn" data-target="#galerie" title="Galerie">🖼 Galerie</button></li>
+          <li><button class="nav-btn" data-target="#avis" title="Avis">⭐ Avis</button></li>
+          <li><button id="theme-toggle" class="nav-btn theme-toggle" title="Mode jour/nuit">☾ Nuit</button></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -30,7 +28,8 @@
 
     <div id="content">
       <div id="cours" class="section">
-        <h1>Web rétro 2000–2010 — Démonstration moderne</h1>
+        <h1>Web Rétro 2000–2010 — Démonstration Sophistiquée</h1>
+        <p class="intro-text">Découvrez comment créer une interface moderne utilisant uniquement les technologies du début des années 2000.</p>
         
         <div class="tabs" id="course-tabs">
           <ul class="tabs-nav">
@@ -40,30 +39,30 @@
           </ul>
           <div class="tabs-content">
             <div id="tab-html4" class="tab-pane active">
-              <h3>HTML4: principes et doctype</h3>
-              <p>HTML 4.01 structure le contenu avec des balises sémantiques limitées (sans <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, etc.). Le doctype courant était <em>Transitional</em> pour plus de tolérance d'anciennes pratiques.</p>
+              <h3>HTML4: Structure &amp; Sémantique</h3>
+              <p>HTML 4.01 utilise des balises classiques pour structurer le contenu. Le doctype <em>Transitional</em> offrait une meilleure compatibilité rétroactive.</p>
               <ul>
-                <li>Doctype: <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code></li>
-                <li>Attributs présentations parfois utilisés (à éviter au profit du CSS).</li>
-                <li>Intégration média via <strong>iframes</strong> ou plugins (Flash).</li>
+                <li>Doctype: <code>&lt;!DOCTYPE HTML PUBLIC ...&gt;</code></li>
+                <li>Pas de balises sémantiques HTML5 (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, etc.)</li>
+                <li>Intégration média via iframes ou plugins</li>
               </ul>
             </div>
             <div id="tab-css21" class="tab-pane">
-              <h3>CSS 2.1: mise en page "old school"</h3>
-              <p>La mise en page responsive se fait via <strong>floats</strong>, largeurs en %, et quelques media queries. Pas de flexbox/grid.</p>
+              <h3>CSS 2.1: Mise en Page "Old School"</h3>
+              <p>CSS 2.1 utilise des <strong>floats</strong> pour les colonnes et des widths en % pour la fluidité.</p>
               <ul>
-                <li>Colonnes avec <code>float:left</code> et <code>overflow:hidden</code> pour le clearfix.</li>
-                <li>Unités relatives (%), images fluides (<code>width:100%</code>).</li>
-                <li>Dégradations gracieuses pour anciens navigateurs.</li>
+                <li>Colonnes avec <code>float:left</code> + <code>overflow:hidden</code></li>
+                <li>Largeurs en pourcentage pour la responsivité</li>
+                <li>Pas de flexbox, grid, ou @media queries</li>
               </ul>
             </div>
             <div id="tab-jq1" class="tab-pane">
-              <h3>jQuery 1.x: interactions légères</h3>
-              <p>jQuery 1 facilite la manipulation du DOM, les animations (<code>fadeIn/slideToggle</code>), et les événements, compatible IE6+.</p>
+              <h3>jQuery 1.x: Interactions Légères</h3>
+              <p>jQuery 1 simplifie la manipulation du DOM, les animations et les événements.</p>
               <ul>
                 <li>Menu burger: <code>$('#nav').slideToggle()</code></li>
-                <li>Carrousel: simple alternance des slides avec <code>fadeIn</code>.</li>
-                <li>Formulaire: validations de base et rendu dynamique des avis.</li>
+                <li>Carrousel: alternance fluide des slides</li>
+                <li>Validations de formulaire légères</li>
               </ul>
             </div>
           </div>
@@ -71,48 +70,46 @@
 
         <div class="columns">
           <div class="col col-left">
-            <h3>Intégration vidéo</h3>
-            <p>Avant HTML5, la vidéo était souvent intégrée via un plugin (ex: Flash) ou via une <em>iframe</em> vers un lecteur externe (YouTube). Avec HTML5, la balise <code>&lt;video&gt;</code> a simplifié l'intégration native.</p>
+            <h3>Intégration Vidéo</h3>
+            <p>Avant HTML5, la vidéo était embarquée via <strong>Flash</strong> ou des <em>iframes</em> externes. Aujourd'hui on utilise HTML5 <code>&lt;video&gt;</code> avec codecs modernes (H.264, VP9, AV1).</p>
             <ul>
-              <li><strong>2000s</strong>: Flash Player, iframes vers lecteurs propriétaires.</li>
-              <li><strong>2010s</strong>: HTML5 video, codecs H.264 / VP8, conteneurs MP4 / WebM.</li>
-              <li><strong>Aujourd'hui</strong>: streaming adaptatif (HLS/DASH), DRM (EME), sous-titres (VTT).</li>
+              <li><strong>2000s</strong>: Flash Player, lecteurs propriétaires</li>
+              <li><strong>2010s</strong>: HTML5 video natif</li>
+              <li><strong>2020s</strong>: Streaming adaptatif (HLS/DASH)</li>
             </ul>
           </div>
           <div class="col col-right">
-            <h3>Codecs & conteneurs</h3>
-            <p>Un <strong>codec</strong> (H.264, VP9, AV1) compresse la vidéo. Un <strong>conteneur</strong> (MP4, WebM) encapsule audio, vidéo et métadonnées. Compatibilité varie selon navigateurs et époques.</p>
-            <p>Sur cette page, nous restons <strong>compatibles HTML4/CSS2.1/jQuery1</strong> et intégrons une vidéo via une iframe YouTube.</p>
+            <h3>Codecs &amp; Conteneurs</h3>
+            <p>Un <strong>codec</strong> compresse la vidéo (H.264, VP9). Un <strong>conteneur</strong> encapsule audio, vidéo et métadonnées (MP4, WebM).</p>
+            <p>Sur cette page, nous utilisons une <em>iframe YouTube</em> pour rester compatible HTML4/CSS2.1/jQuery1.</p>
           </div>
           <div class="clear"></div>
         </div>
       </div>
 
       <div id="video" class="section">
-        <h2>Vidéo: Tutoriel sur HTML (intégration via iframe)</h2>
+        <h2>Vidéo Intégrée: Tutoriel HTML</h2>
         <div class="video-wrapper">
           <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ppauAg1JKNg" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ppauAg1JKNg" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
           </div>
         </div>
       </div>
 
       <div id="demo" class="section">
-        <h2>Carrousel d'images (jQuery 1.x)</h2>
+        <h2>Carrousel d'Images Interactif</h2>
         <div id="carousel" class="carousel">
           <div class="slides">
             <div class="slide active"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/legacy1/800/400" alt="Image 1"></div>
             <div class="slide"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/legacy2/800/400" alt="Image 2"></div>
             <div class="slide"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/legacy3/800/400" alt="Image 3"></div>
           </div>
-          <a href="#" class="prev" id="prev">‹</a>
-          <a href="#" class="next" id="next">›</a>
           <div class="carousel-dots" id="carousel-dots"></div>
         </div>
       </div>
 
       <div id="galerie" class="section">
-        <h2>Galerie de démonstration</h2>
+        <h2>Galerie Lightbox</h2>
         <div class="gallery" id="gallery">
           <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic1/300/180" alt="Photo 1">
           <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic2/300/180" alt="Photo 2">
@@ -120,21 +117,19 @@
           <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic4/300/180" alt="Photo 4">
           <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic5/300/180" alt="Photo 5">
           <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic6/300/180" alt="Photo 6">
-          <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic7/300/180" alt="Photo 7">
-          <img class="thumb lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="https://picsum.photos/seed/pic8/300/180" alt="Photo 8">
         </div>
         <div id="lightbox" class="lightbox" style="display:none">
-          <a href="#" class="lightbox-close" id="lightbox-close">×</a>
+          <a href="#" class="lightbox-close" id="lightbox-close">✕ Fermer</a>
           <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Agrandissement">
         </div>
       </div>
 
       <div id="avis" class="section">
-        <h2>Avis des utilisateurs</h2>
+        <h2>Avis des Utilisateurs</h2>
         <div class="columns">
           <div class="col col-left">
             <div id="stats" class="stats">
-              <div class="stat-row"><strong>Nombre d'avis:</strong> <span id="stat-count">0</span></div>
+              <div class="stat-row"><strong>Avis:</strong> <span id="stat-count">0</span></div>
               <div class="stat-row"><strong>Note moyenne:</strong> <span id="stat-avg">0.0</span> / 5</div>
               <div class="histogram">
                 <div class="bar"><span class="bar-label">5★</span><div class="bar-fill" id="h5" style="width:0%"></div></div>
@@ -145,14 +140,14 @@
               </div>
             </div>
             <div id="reviews" class="reviews">
-              <h3>Derniers avis</h3>
+              <h3>Derniers Avis</h3>
               <ul id="reviews-list"></ul>
             </div>
           </div>
           <div class="col col-right">
-            <h3>Donner votre avis</h3>
+            <h3>Votre Avis</h3>
             <div class="form-notice" id="form-notice">
-              Ce site de démonstration est réalisé avec des outils « anciens » (HTML4, CSS2.1, jQuery 1). Vos avis sont enregistrés dans une base de données sqlite.
+              Ce site de démonstration est réalisé avec des outils « anciens » (HTML4, CSS2.1, jQuery 1). Vos avis sont enregistrés localement.
             </div>
             <form id="review-form" action="#" method="post">
               <div class="field">
@@ -174,17 +169,17 @@
               </div>
               <div class="field">
                 <label>Ce que vous aimez dans le stack ancien</label>
-                <div><label><input type="checkbox" name="likes" value="simplicite"> Simplicité</label></div>
-                <div><label><input type="checkbox" name="likes" value="compatibilite"> Compatibilité large</label></div>
-                <div><label><input type="checkbox" name="likes" value="performance"> Performance perçue</label></div>
-                <div><label><input type="checkbox" name="likes" value="connais_pas"> Je ne le connais pas</label></div>
+                <div><label><input type="checkbox" name="likes" value="simplicite"> ✓ Simplicité</label></div>
+                <div><label><input type="checkbox" name="likes" value="compatibilite"> ✓ Compatibilité large</label></div>
+                <div><label><input type="checkbox" name="likes" value="performance"> ✓ Performance perçue</label></div>
+                <div><label><input type="checkbox" name="likes" value="connais_pas"> ✓ Je ne le connais pas</label></div>
               </div>
               <div class="field">
                 <label>Ce qui est difficile</label>
-                <div><label><input type="checkbox" name="pains" value="mise_en_page"> Mise en page (floats)</label></div>
-                <div><label><input type="checkbox" name="pains" value="accessibilite"> Accessibilité</label></div>
-                <div><label><input type="checkbox" name="pains" value="maintenabilite"> Maintenabilité</label></div>
-                <div><label><input type="checkbox" name="pains" value="connais_pas"> Je ne le connais pas</label></div>
+                <div><label><input type="checkbox" name="pains" value="mise_en_page"> ✓ Mise en page (floats)</label></div>
+                <div><label><input type="checkbox" name="pains" value="accessibilite"> ✓ Accessibilité</label></div>
+                <div><label><input type="checkbox" name="pains" value="maintenabilite"> ✓ Maintenabilité</label></div>
+                <div><label><input type="checkbox" name="pains" value="connais_pas"> ✓ Je ne le connais pas</label></div>
               </div>
               <div class="field">
                 <label for="rating">Note sur la démonstration</label>
@@ -199,10 +194,10 @@
               </div>
               <div class="field">
                 <label for="comment">Commentaire</label>
-                <textarea id="comment" name="comment" rows="4" cols="30" maxlength="500"></textarea>
+                <textarea id="comment" name="comment" rows="6" cols="30" maxlength="500"></textarea>
               </div>
               <div class="actions">
-                <button type="submit" id="submit-btn">Envoyer mon avis</button>
+                <button type="submit" id="submit-btn">↵ Envoyer mon avis</button>
               </div>
               <div id="form-msg" class="form-msg" style="display:none"></div>
             </form>
@@ -213,7 +208,7 @@
     </div>
 
     <div id="footer">
-      <div>© 2025 — Design élégant avec HTML4/CSS2.1/jQuery1</div>
+      <div>© 2025 — Design Sophistiqué avec HTML4 / CSS2.1 / jQuery 1</div>
     </div>
   </div>
 </body>
