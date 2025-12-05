@@ -302,6 +302,7 @@ body.night #footer {
 .nav {
   float: right;
   margin: 0;
+  padding-left: 0; /* neutralise padding ul par défaut */
 }
 .nav li {
   float: left;
@@ -394,6 +395,8 @@ code {
   overflow: hidden;
   border-bottom: 2px solid #e8e5e0;
   margin-bottom: 0;
+  margin-left: 0; /* neutralise la marge de .section ul */
+  padding-left: 0;
 }
 .tabs-nav li {
   float: left;
@@ -780,7 +783,7 @@ body.mobile .tabs-nav li {
 }
 body.mobile .tabs-nav a {
   display: block;
-  width: 90%;
+  width: 86%;
   padding: 14px 16px;
   text-align: center;
   /* Effet biseauté "adoucissant" (haut/gauche clair, bas/droite plus sombre) */
@@ -819,7 +822,15 @@ body.mobile .tabs-nav li.active a {
 body.mobile input[type="text"],
 body.mobile select,
 body.mobile textarea {
-  width: 92%;
+  width: 84%;
+  margin: 0 auto;
+  font-size: 16px; /* iPhone: évite le zoom et les décalages */
+  max-width: 100%;
+}
+body.mobile #review-form,
+body.mobile #form-notice {
+  width: 94%;
+  margin: 0 auto;
 }
 body.mobile #header {
   padding: 16px 18px;
@@ -839,6 +850,7 @@ body.mobile .nav {
   margin-top: 14px;
   clear: both;
   padding: 8px 0;
+  padding-left: 0;
 }
 body.mobile .nav li {
   float: none;
@@ -848,9 +860,9 @@ body.mobile .nav li {
 }
 body.mobile .nav-btn {
   display: block;
-  width: 100%;
+  width: 92%;
   padding: 12px 14px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
   text-align: center;
 }
 body.mobile .carousel .slides {
@@ -859,8 +871,9 @@ body.mobile .carousel .slides {
 /* Mobile gallery displays 2 images per line */
 body.mobile .gallery .thumb {
   /* 2 colonnes stables sans box-sizing: largeur + marges < 100% même avec bordures */
-  width: 45%;
-  margin: 2% 2% 12px 2%;
+  width: 40%;
+  margin: 2% 3% 12px 3%;
+  border: 1px solid #e8e5e0; /* réduire l'impact px sur très petits écrans */
 }
 body.mobile textarea {
   min-height: 140px;
