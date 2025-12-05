@@ -361,16 +361,26 @@ function initApp() {
         pains.push($(this).val()); 
       });
       
+      var $msg = $('#form-msg');
+      function showMsg(text, ok){
+        if (ok){
+          $msg.css({ borderColor:'#0088aa', background:'#e8f8fb', color:'#005577' });
+        } else {
+          $msg.css({ borderColor:'#cc0000', background:'#ffecec', color:'#990000' });
+        }
+        $msg.text(text).show();
+        try { $('html, body').animate({ scrollTop: $msg.offset().top - 100 }, 300); } catch(ex){}
+      }
       if(!consent){ 
-        alert('Veuillez accepter les conditions.'); 
+        showMsg('Veuillez accepter les conditions avant d\'envoyer votre avis.', false); 
         return; 
       }
       if(!name){ 
-        alert('Veuillez entrer votre nom.'); 
+        showMsg('Veuillez entrer votre nom.', false); 
         return; 
       }
       if(!rating){ 
-        alert('Veuillez donner une note.'); 
+        showMsg('Veuillez choisir une note.', false); 
         return; 
       }
       var payload = {
@@ -381,24 +391,32 @@ function initApp() {
         likes: likes.join(','),
         pains: pains.join(',')
       };
+      var $btn = $('#submit-btn');
+      var oldBtn = $btn.text();
+      $btn.prop('disabled', true).text('Envoi…');
       $.ajax({
         url: 'api/save_review.php',
         method: 'POST',
         data: payload,
-        dataType: 'json'
+        dataType: 'json',
+        cache: false,
+        timeout: 10000
       })
       .done(function(resp){
         if (resp && resp.ok){
           $('#review-form')[0].reset();
-          $('#form-msg').text('Merci pour votre avis !').show().delay(3000).fadeOut();
+          showMsg('Merci pour votre avis !', true);
           fetchReviews();
           fetchStats();
         } else {
-          alert('Erreur: impossible d\'enregistrer.');
+          showMsg('Erreur: impossible d\'enregistrer votre avis. Veuillez réessayer.', false);
         }
       })
       .fail(function(){
-        alert('Erreur réseau ou serveur.');
+        showMsg('Erreur réseau ou serveur pendant l\'envoi. Vérifiez votre connexion et réessayez.', false);
+      })
+      .always(function(){
+        $btn.prop('disabled', false).text(oldBtn);
       });
     });
 
